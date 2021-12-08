@@ -446,24 +446,22 @@ function buildGroupNav (members, title) {
 function buildNav(members, navTypes = null, betterDocs) {
   const href = betterDocs.landing ? 'docs.html' : 'index.html'
 
-  var nav = navTypes ? '' : `  <h3>Introduction</h3>
-  <ul>
-  <li><h2><a href="${href}#USSP Intro">USSP Intro</a></h2><li>
-  <li> <h2><a href="${href}#What is U-space">What is U-space?</a></h2> </li>
-  <li><li><h2><a href="${href}#USSP top services">USSP top services</a></h2> </li>
-  <li><h2><a href="${href}#USSP requirements">USSP requirements</a></h2> </li>
-  <li><h2><a href="${href}#USSP operation steps">USSP operation steps</a></h2> </li>
+  var nav = navTypes ? '' : `<h3>Introduction</h3>
+<ul>
+  <li><a href="${href}#USSP Intro">USSP Intro</a><li>
+  <li><a href="${href}#What is U-space">What is U-space?</a></li>
+  <li><a href="${href}#USSP top services">USSP top services</a></li>
+  <li><a href="${href}#USSP requirements">USSP requirements</a></li>
+  <li><a href="${href}#USSP operation steps">USSP operation steps</a></li>
   </ul>
-  <h2 style=" margin-top: 10px;"> </h2>
-
   <h3>High Lander ConOps</h3>
   <ul>
-  <li><h2><a href="${href}#USSP Neighbors">USSP Neighbors</a></h2></li>
-  <li><h2><a href="${href}#Terms and definitions">Terms and definitions</a></h2></li>
-  <li><h2><a href="${href}#Explore">Explore</a></h2></li>
-  <li><h2><a href="${href}#Plan">Plan</a></h2></li>
-  <li><h2><a href="${href}#Pre flight">Pre flight</a></h2></li>
-  <li><h2><a href="${href}#Fly">Fly</a></h2></li>
+  <li><a href="${href}#USSP Neighbors">USSP Neighbors</a></li>
+  <li><a href="${href}#Terms and definitions">Terms and definitions</a></li>
+  <li><a href="${href}#Explore">Explore</a></li>
+  <li><a href="${href}#Plan">Plan</a></li>
+  <li><a href="${href}#Pre flight">Pre flight</a></li>
+  <li><a href="${href}#Fly">Fly</a></li>
   </ul>
   `
 
