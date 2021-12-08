@@ -449,26 +449,21 @@ function buildNav(members, navTypes = null, betterDocs) {
   var nav = navTypes ? '' : `  <h3>Introduction</h3>
   <ul>
   <li><h2><a href="${href}#USSP Intro">USSP Intro</a></h2><li>
-  <li><h2><a href="${href}#The need for a framework">The need for a framework</a></h2> </li>
   <li> <h2><a href="${href}#What is U-space">What is U-space?</a></h2> </li>
   <li><li><h2><a href="${href}#USSP top services">USSP top services</a></h2> </li>
   <li><h2><a href="${href}#USSP requirements">USSP requirements</a></h2> </li>
   <li><h2><a href="${href}#USSP operation steps">USSP operation steps</a></h2> </li>
-  <li><h2><a href="${href}#Risks models">Risks models</a></h2> </li>
   </ul>
   <h2 style=" margin-top: 10px;"> </h2>
 
   <h3>High Lander ConOps</h3>
   <ul>
+  <li><h2><a href="${href}#USSP Neighbors">USSP Neighbors</a></h2></li>
   <li><h2><a href="${href}#Terms and definitions">Terms and definitions</a></h2></li>
-  <li><h2><a href="${href}#HL USSP flow">HL USSP flow</a></h2></li>
   <li><h2><a href="${href}#Explore">Explore:</a></h2></li>
-  <li><h2><a href="${href}#CIS">CIS</a></h2></li>
-  <li><h2><a href="${href}#Rulesets">Rulesets</a></h2></li>
-  <li><h2><a href="${href}#Tower Cells">Tower Cells</a></h2></li>
-  <li><h2><a href="${href}#Weather">Weather</a></h2></li>
-  <li><h2><a href="${href}#Aircrafts">Aircrafts</a></h2></li>
-  <li><h2><a href="${href}#Other USSPS">Other USSPS</a></h2></li>
+  <li><h2><a href="${href}#Plan">Plan</a></h2></li>
+  <li><h2><a href="${href}#Pre flight">Pre flight</a></h2></li>
+  <li><h2><a href="${href}#Fly">Fly</a></h2></li>
   </ul>
   `
 
