@@ -399,7 +399,7 @@ function buildGroupNav (members, title) {
   nav += buildMemberNav(members.tutorials || [], 'Tutorials', seenTutorials, linktoTutorial)
   nav += buildMemberNav(members.modules || [], 'Modules', {}, linkto)
   nav += buildMemberNav(members.externals || [], 'Externals', seen, linktoExternal)
-  nav += buildMemberNav(members.namespaces || [], 'Namespaces', seen, linkto)
+  nav += buildMemberNav(members.namespaces || [], 'Entities', seen, linkto)
   nav += buildMemberNav(members.classes || [], 'Classes', seen, linkto)
   nav += buildMemberNav(members.interfaces || [], 'Interfaces', seen, linkto)
   nav += buildMemberNav(members.events || [], 'Events', seen, linkto)
@@ -445,7 +445,32 @@ function buildGroupNav (members, title) {
  */
 function buildNav(members, navTypes = null, betterDocs) {
   const href = betterDocs.landing ? 'docs.html' : 'index.html'
-  var nav = navTypes ? '' : `<h2><a href="${href}">Documentation</a></h2>`
+
+  var nav = navTypes ? '' : `  <h3>Introduction</h3>
+  <ul>
+  <li><h2><a href="${href}#USSP Intro">USSP Intro</a></h2><li>
+  <li><h2><a href="${href}#The need for a framework">The need for a framework</a></h2> </li>
+  <li> <h2><a href="${href}#What is U-space">What is U-space?</a></h2> </li>
+  <li><li><h2><a href="${href}#USSP top services">USSP top services</a></h2> </li>
+  <li><h2><a href="${href}#USSP requirements">USSP requirements</a></h2> </li>
+  <li><h2><a href="${href}#USSP operation steps">USSP operation steps</a></h2> </li>
+  <li><h2><a href="${href}#Risks models">Risks models</a></h2> </li>
+  </ul>
+  <h2 style=" margin-top: 10px;"> </h2>
+
+  <h3>High Lander ConOps</h3>
+  <ul>
+  <li><h2><a href="${href}#Terms and definitions">Terms and definitions</a></h2></li>
+  <li><h2><a href="${href}#HL USSP flow">HL USSP flow</a></h2></li>
+  <li><h2><a href="${href}#Explore">Explore:</a></h2></li>
+  <li><h2><a href="${href}#CIS">CIS</a></h2></li>
+  <li><h2><a href="${href}#Rulesets">Rulesets</a></h2></li>
+  <li><h2><a href="${href}#Tower Cells">Tower Cells</a></h2></li>
+  <li><h2><a href="${href}#Weather">Weather</a></h2></li>
+  <li><h2><a href="${href}#Aircrafts">Aircrafts</a></h2></li>
+  <li><h2><a href="${href}#Other USSPS">Other USSPS</a></h2></li>
+  </ul>
+  `
 
   var categorised = {}
   var rootScope = {}
@@ -533,7 +558,7 @@ exports.publish = function(taffyData, opts, tutorials) {
   helper.setTutorials(tutorials)
 
   data = helper.prune(data)
-  data.sort('longname, version, since')
+ // data.sort('longname, version, since')
   helper.addEventListeners(data)
 
   data().each(function(doclet) {
@@ -727,7 +752,7 @@ exports.publish = function(taffyData, opts, tutorials) {
   files = find({kind: 'file'})
   packages = find({kind: 'package'})
 
-  generate('Home', '',
+  generate('High Lander USSP', '',
     packages.concat(
       [{
         kind: 'mainpage',
@@ -763,7 +788,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     }
 
     if (myNamespaces.length) {
-      generate(myNamespaces[0].name, 'Namespace', myNamespaces, helper.longnameToUrl[longname])
+      generate(myNamespaces[0].name, '', myNamespaces, helper.longnameToUrl[longname])
     }
 
     if (myMixins.length) {
@@ -815,7 +840,7 @@ exports.publish = function(taffyData, opts, tutorials) {
     const content = fs.readFileSync(conf.betterDocs.landing, 'utf8')
         
     var landingPageData = {
-      title: 'Home',
+      title: 'High Lander USSP',
       content,
     }
 
