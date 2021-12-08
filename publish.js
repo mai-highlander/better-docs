@@ -460,7 +460,7 @@ function buildNav(members, navTypes = null, betterDocs) {
   <ul>
   <li><h2><a href="${href}#USSP Neighbors">USSP Neighbors</a></h2></li>
   <li><h2><a href="${href}#Terms and definitions">Terms and definitions</a></h2></li>
-  <li><h2><a href="${href}#Explore">Explore:</a></h2></li>
+  <li><h2><a href="${href}#Explore">Explore</a></h2></li>
   <li><h2><a href="${href}#Plan">Plan</a></h2></li>
   <li><h2><a href="${href}#Pre flight">Pre flight</a></h2></li>
   <li><h2><a href="${href}#Fly">Fly</a></h2></li>
