@@ -446,24 +446,7 @@ function buildGroupNav (members, title) {
 function buildNav(members, navTypes = null, betterDocs) {
   const href = betterDocs.landing ? 'docs.html' : 'index.html'
 
-  var nav = navTypes ? '' : `<h3>Introduction</h3>
-<ul>
-  <li><a href="${href}#USSP Intro">USSP Intro</a><li>
-  <li><a href="${href}#What is U-space">What is U-space?</a></li>
-  <li><a href="${href}#USSP top services">USSP top services</a></li>
-  <li><a href="${href}#USSP requirements">USSP requirements</a></li>
-  <li><a href="${href}#USSP operation steps">USSP operation steps</a></li>
-  </ul>
-  <h3>High Lander ConOps</h3>
-  <ul>
-  <li><a href="${href}#USSP Neighbors">USSP Neighbors</a></li>
-  <li><a href="${href}#Terms and definitions">Terms and definitions</a></li>
-  <li><a href="${href}#Explore">Explore</a></li>
-  <li><a href="${href}#Plan">Plan</a></li>
-  <li><a href="${href}#Pre flight">Pre flight</a></li>
-  <li><a href="${href}#Fly">Fly</a></li>
-  </ul>
-  `
+  var nav = navTypes ? '' : `<h3>Introduction</h3><ul><li><a href="${href}#USSP Intro">USSP Intro</a><li><li><a href="${href}#What is U-space">What is U-space?</a></li><li><a href="${href}#USSP top services">USSP top services</a></li><li><a href="${href}#USSP requirements">USSP requirements</a></li><li><a href="${href}#USSP operation steps">USSP operation steps</a></li></ul><h3>High Lander ConOps</h3><ul><li><a href="${href}#USSP Neighbors">USSP Neighbors</a></li><li><a href="${href}#Terms and definitions">Terms and definitions</a></li><li><a href="${href}#Explore">Explore</a></li><li><a href="${href}#Plan">Plan</a></li><li><a href="${href}#Pre flight">Pre flight</a></li><li><a href="${href}#Fly">Fly</a></li></ul>`
 
   var categorised = {}
   var rootScope = {}
