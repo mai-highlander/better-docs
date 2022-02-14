@@ -12,13 +12,14 @@ var isTutorial = subtitle === 'Tutorial'
 
 var search = env.conf.templates && env.conf.templates.search
 
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <?js= this.partial('head.tmpl', { betterDocs, title }) ?>
 
-<body class="<?js= self.smallHeader ? 'layout small-header' : 'layout'?>">
+<body onload="javascript:if(localStorage.getItem('history')){document.location.href = document.location.href.replace(document.location.href.split('/')[document.location.href.split('/').length - 1], localStorage.getItem('history').split('.')[0] + '.html') + '#.' + localStorage.getItem('history').split('.')[1]; localStorage.removeItem('history')}" class="<?js= self.smallHeader ? 'layout small-header' : 'layout'?>">
     <div id="stickyNavbarOverlay"></div>
     <?js= this.partial('topnav.tmpl', { betterDocs }) ?>
     <div id="main">
