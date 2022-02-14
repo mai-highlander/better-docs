@@ -50,6 +50,8 @@
 
 <article>
     <div class="container-overview">
+    <a href="javascript:localStorage.setItem('history', (document.location.href.split('#')[1].split('.')[0] + '.' + document.location.href.split('#')[1].split('.')[1])); document.location.href = document.location.href.replace(document.location.href.split('/')[document.location.href.split('/').length - 1], document.location.href.split('#')[1].split('.')[0] + '.html') + '#.' + document.location.href.split('#')[1].split('.')[1]">Back</a>
+
     <?js if (doc.kind === 'module' && doc.modules) { ?>
         <?js if (doc.description) { ?>
             <div class="description"><?js= doc.description ?></div>
