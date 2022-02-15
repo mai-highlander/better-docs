@@ -12,14 +12,13 @@ var isTutorial = subtitle === 'Tutorial'
 
 var search = env.conf.templates && env.conf.templates.search
 
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <?js= this.partial('head.tmpl', { betterDocs, title }) ?>
 
-<body style="scroll-behavior: smooth;" onload="javascript:if(localStorage.getItem('history')){document.getElementById('.' + localStorage.getItem('history').split('.')[1]).scrollIntoView(); localStorage.removeItem('history')}" class="<?js= self.smallHeader ? 'layout small-header' : 'layout'?>">
+<body class="<?js= self.smallHeader ? 'layout small-header' : 'layout'?>">
     <div id="stickyNavbarOverlay"></div>
     <?js= this.partial('topnav.tmpl', { betterDocs }) ?>
     <div id="main">
